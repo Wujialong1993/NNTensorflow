@@ -1,0 +1,26 @@
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-1, 1, num=50)
+
+plt.figure()
+plt.subplot2grid((3, 3), (0, 0), colspan = 3, rowspan = 1)
+# 绘制普通图像
+y1 = 2 * x + 1
+print(x)
+plt.plot(x, y1)
+
+
+plt.subplot2grid((3, 3), (1, 0), colspan = 3, rowspan = 1)
+# 绘制普通图像
+y2 = x**2
+plt.plot(x, y2)
+
+
+plt.subplot2grid((3, 3), (2, 0), colspan = 3, rowspan = 1)
+# figure 3，指定figure的编号并指定figure的大小, 指定线的颜色, 宽度和类型
+y2 = x**3
+plt.plot(x, y1, color='green')
+plt.plot(x, y2, color = 'red', linewidth = 1.0, linestyle = '-')
+plt.show()
